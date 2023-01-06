@@ -6,6 +6,7 @@ import { Route } from "react-router-dom";
 import LocalFireDepartmentIcon from '@mui/icons-material/LocalFireDepartment';
 import { CircularProgress, Box } from '@mui/material';
 import authMethods from "./authMethods.json";
+import { MyComponent } from './components/MyComponent';
 
 const Logo = ({size, color}) => {
 	const logoColor = color || 'warning';
@@ -56,7 +57,7 @@ function App() {
 					<Routes>
 						<Route element={<AuthRoutes loader={<Loader size="large" />} />} >
 							<Route element={<AppTemplate logo={<Logo size="large" />} toolBarMenu={<UserMenu />} drawerMenu={<MainMenu />} />}>
-								<Route exact path="/" element={<></>} />
+								<Route exact path="/" element={<MyComponent />} />
 								<Route exact path={pathnames.UserProfile} element={<UserProfile />} />
 								<Route exact path={pathnames.UserUpdateEmail} element={<UserUpdateEmail />} />
 								<Route exact path={pathnames.UserUpdateName} element={<UserUpdateName />} />
