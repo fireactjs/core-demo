@@ -31,6 +31,13 @@
         "source": "**",
         "destination": "/index.html"
       }
+    ],
+    "redirects": [
+      {
+        "source": "**",
+        "destination": "https://fireact.dev/demos/",
+        "type": 301
+      }
     ]
   }
 }
